@@ -90,7 +90,7 @@ function dragDrop(e) {
   console.log(e);
   var data = e.dataTransfer.getData("Text");
   var elem = document.createElement("div");
-  elem.className = "card-element";
+  elem.className = "card-element grabbable";
   elem.setAttribute("draggable", "true");
   elem.textContent = data;
   elem.addEventListener("dragstart", (e) => dragStart(e));
@@ -126,9 +126,3 @@ done.addEventListener("dragenter", (e) => dragEnter(e));
 done.addEventListener("dragleave", (e) => dragLeave(e));
 done.addEventListener("dragover", (e) => dragOver(e));
 done.addEventListener("drop", (e) => dragDrop(e));
-
-$("body").awesomeCursor("location-arrow", {
-  flip: "horizontal",
-});
-
-// $(".card-element").awesomeCursor("hand-paper");
