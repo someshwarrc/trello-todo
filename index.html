@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello TODO</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/jwarby/jquery-awesome-cursor/master/dist/jquery.awesome-cursor.min.js"></script></pre>
+    <link rel="stylesheet" href="static/main.css" />
+  </head>
+  <body>
+    <div class="modal hidden">
+      <textarea name="task" id="task" cols="50" rows="8"></textarea>
+
+      <div class="checkbox">
+        <div class="input">
+          <input type="radio" id="todo" name="task-status" value="todo" />
+          <label for="todo">To-do</label>
+        </div>
+        <div class="input">
+          <input type="radio" id="doing" name="task-status" value="doing" />
+          <label for="doing">Doing</label>
+        </div>
+        <div class="input">
+          <input type="radio" id="done" name="task-status" value="done" />
+          <label for="done">Done</label>
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn" id="submit-task">Add</button>
+        <button class="btn" id="cancel-task">Cancel</button>
+      </div>
+    </div>
+    <div class="container">
+      <div id="add-task" class="btn">Add Task</div>
+
+      <div class="card todo">
+        <div class="heading">TO DO</div>
+        <div class="hr-line"></div>
+        <div class="card-body">
+          <div class="card-element" draggable="true" class="grabbable">Wash Clothes</div>
+          <div class="card-element" draggable="true" class="grabbable">Cook food</div>
+        </div>
+      </div>
+      <div class="card doing">
+        <div class="heading">DOING</div>
+        <div class="hr-line"></div>
+        <div class="card-body"></div>
+      </div>
+      <div class="card done">
+        <div class="heading">DONE</div>
+        <div class="hr-line"></div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+    <script src="static/main.js"></script>
+  </body>
+</html>
